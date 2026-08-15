@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Landing page MMD</title>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="div-asli"> 
+   <aside class="sidebar">
+     <div class="sidebar-top">
+      <a href="#" class="nav-item active">
+        <img src="home-svgrepo-com.svg" class="icon icon-home" alt="Home">
+      </a>
+
+      <a href="#" class="nav-item">
+        <img src="windows-svgrepo-com.svg" class="icon" alt="Dashboard">
+      </a>
+
+      <a href="#" class="nav-item">
+        <img src="chart-line-up-svgrepo-com.svg" class="icon" alt="Analytics">
+      </a>
+
+      <a href="#" class="nav-item">
+        <img src="calendar-alt-svgrepo-com.svg" class="icon" alt="Calendar">
+      </a>
+
+      <a href="#" class="nav-item">
+        <img src="folder-svgrepo-com.svg" class="icon" alt="Files">
+      </a>
+
+      <a href="#" class="nav-item">
+        <img src="settings-svgrepo-com.svg" class="icon" alt="Settings">
+      </a>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="theme-switch" id="themeToggle">
+        <img src="sun-svgrepo-com.svg" class="icon icon-sun" id="themeIcon" alt="Theme mode">
+        <span id="themeText">Light</span>
+      </div>
+
+
+      <div class="user-badge">
+        <div class="user-dot"></div>
+        <span>Aaru</span>
+        <span class="arrow">›</span>
+      </div>
+     </div>
+   </aside>
+
+
+
+
+
+
+
+
+  <div class="col2">
+  <!-- سکشن اول: Welcome -->
+  <div class="welcome-card">
+    <div class="welcome-header">
+      <div class="welcome-copy">
+        <span class="greeting-top">Good Evening,</span>
+        <h1 class="user-display-name">Aaru</h1>
+        <p class="welcome-quote">Stay focused and make it happen.</p>
+      </div>
+
+      <div class="time-badge">
+        <span id="current-time">07:45 PM</span>
+      </div>
+    </div>
+
+    <div class="welcome-graph">
+      <svg viewBox="0 0 520 110" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="welcomeLine" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3b82f6"/>
+            <stop offset="50%" stop-color="#6366f1"/>
+            <stop offset="100%" stop-color="#8b5cf6"/>
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3.5" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+
+        <path
+          d="M8,82 
+             C40,84 55,86 82,79
+             C108,72 118,58 146,64
+             C172,70 184,80 210,66
+             C236,50 252,34 278,46
+             C306,58 324,76 350,62
+             C378,46 394,26 418,36
+             C444,46 458,64 482,52
+             C498,44 506,26 514,18"
+          fill="none"
+          stroke="url(#welcomeLine)"
+          stroke-width="3.2"
+          stroke-linecap="round"
+          filter="url(#glow)"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <!-- سکشن دوم: Weather -->
+ <div class="weather-card">
+  <div class="weather-top-row">
+    <span class="weather-date" id="weather-date">May 24, 2025</span>
+    <span class="weather-day" id="weather-day">Saturday</span>
+  </div>
+
+  <div class="weather-main-display">
+    <div class="weather-icon-box">
+      <img id="weather-icon" src="" alt="Weather Icon">
+    </div>
+
+    <div class="weather-temp-box">
+      <span class="main-temp" id="weather-temp">27°</span>
+      <span class="weather-desc" id="weather-desc">Cloudy</span>
+    </div>
+  </div>
+
+  <div class="weather-footer">
+    <span id="weather-max">H: 31°</span>
+    <span id="weather-min">L: 21°</span>
+  </div>
+ </div>
+
+ <!-- سکشن سوم Productivity -->
+ <div class="productivity-card" id="productivity-card">
+  <div class="productivity-header">
+    <h3>Productivity</h3>
+    <span id="productivity-range">Today</span>
+  </div>
+
+  <div class="productivity-content">
+    <div class="productivity-left">
+      <h2 id="productivity-percent">78%</h2>
+      <p id="productivity-status">Great Progress!</p>
+
+      <div class="productivity-stats">
+        <div>
+          <span>Tasks Completed</span>
+          <strong id="tasks-completed">14</strong>
+        </div>
+        <div>
+          <span>Total Tasks</span>
+          <strong id="tasks-total">18</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="productivity-right">
+      <div
+        class="progress-ring"
+        id="productivity-ring"
+        data-percent="78"
+        aria-label="Productivity progress"
+      >
+        <div class="progress-inner"></div>
+      </div>
+    </div>
+  </div>
+ </div>
+
+ <!-- سکشن چهارم Focus Timer -->
+
+ <section class="focus-timer-card" id="focus-timer-card">
+  <header class="focus-timer-header">
+    <h3>Focus Timer</h3>
+  </header>
+
+  <div class="focus-timer-content">
+    <div
+      class="focus-ring"
+      id="focus-ring"
+      role="progressbar"
+      aria-label="Focus timer progress"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="0"
+    >
+      <div class="focus-ring-inner">
+        <strong id="focus-time">25:00</strong>
+        <span id="focus-mode">Deep Work</span>
+      </div>
+    </div>
+
+    <button class="focus-start-btn" id="focus-start-btn" type="button">
+      <span class="focus-button-icon" aria-hidden="true">▶</span>
+      <span id="focus-button-text">Start</span>
+    </button>
+  </div>
+ </section>
+
+
+ <!-- سکشن پنجم Tasks -->
+ <div class="tasks-card" id="tasks-card">
+  <div class="tasks-header">
+    <h3>Tasks</h3>
+    <button id="add-task-btn" class="add-task-btn" title="Add New Task">+</button>
+  </div>
+
+  <div class="tasks-input-wrapper" id="tasks-input-wrapper">
+    <input type="text" id="todo-input" class="todo-input" placeholder="Type a task and press Enter...">
+    <button id="submit-task-btn" class="submit-task-btn">Add</button>
+  </div>
+  
+  <div id="tasks-list" class="tasks-list">
+
+  </div>
+ </div>
+
+
+
+ <!-- سکشن ششم Current Mood -->
+
+ <div class="mood-card">
+    <div class="mood-header">
+        <h3>Current Mood</h3>
+        <span class="mood-status">Focused</span>
+    </div>
+    
+    <div class="mood-visual">
+        <svg viewBox="0 0 200 60" preserveAspectRatio="none" class="mood-wave">
+            <path d="M0,30 C40,10 60,50 100,30 C140,10 160,50 200,30" stroke="#00a2ff" fill="transparent" stroke-width="2" />
+            <path d="M0,35 C40,15 60,55 100,35 C140,15 160,55 200,35" stroke="#00a2ff" fill="transparent" stroke-width="1" opacity="0.3" />
+        </svg>
+    </div>
+
+    <div class="mood-footer">
+        <div class="distraction-label">Distractions</div>
+        <div class="distraction-value low">Low</div>
+    </div>
+ </div>
+
+
+ <!-- سکشن هفتم Weekly Activity -->
+
+ <div class="activity-card" id="weekly-activity-card">
+    <div class="activity-header">
+        <h3>Weekly Activity</h3>
+        <div class="activity-dropdown" id="activity-timeframe">
+            <span id="current-timeframe-label">This Week</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+    </div>
+
+    <div class="chart-container" id="activity-chart-container">
+        <div class="bar-group" id="bar-mon" data-day="Mon">
+            <div class="bar-wrapper">
+                <div class="bar" id="bar-fill-mon" style="--height: 45%;"></div>
+            </div>
+            <span class="day-label">Mon</span>
+        </div>
+
+        <div class="bar-group" id="bar-tue" data-day="Tue">
+            <div class="bar-wrapper">
+                <div class="bar" id="bar-fill-tue" style="--height: 30%;"></div>
+            </div>
+            <span class="day-label">Tue</span>
+        </div>
+
+        <div class="bar-group" id="bar-wed" data-day="Wed">
+            <div class="bar-wrapper">
+                <div class="bar" id="bar-fill-wed" style="--height: 55%;"></div>
+            </div>
+            <span class="day-label">Wed</span>
+        </div>
+
+        <div class="bar-group" id="bar-thu" data-day="Thu">
+            <div class="bar-wrapper">
+                <div class="bar" id="bar-fill-thu" style="--height: 40%;"></div>
+            </div>
+            <span class="day-label">Thu</span>
+        </div>
+
+        <div class="bar-group" id="bar-fri" data-day="Fri">
+            <div class="bar-wrapper">
+                <div class="bar" id="bar-fill-fri" style="--height: 65%;"></div>
+            </div>
+            <span class="day-label">Fri</span>
+        </div>
+
+        <div class="bar-group active" id="bar-sat" data-day="Sat">
+            <div class="bar-wrapper">
+                <div class="tooltip" id="activity-tooltip">7.8h</div>
+                <div class="bar" id="bar-fill-sat" style="--height: 85%;"></div>
+            </div>
+            <span class="day-label">Sat</span>
+        </div>
+
+        <div class="bar-group" id="bar-sun" data-day="Sun">
+            <div class="bar-wrapper">
+                <div class="bar" id="bar-fill-sun" style="--height: 50%;"></div>
+            </div>
+            <span class="day-label">Sun</span>
+        </div>
+    </div>
+ </div>
+
+
+ <!-- سکشن هشتم Shortcuts -->
+
+ <div class="shortcuts-card" id="shortcuts-card">
+    <div class="shortcuts-header">
+        <h3>Shortcuts</h3>
+        <button class="shortcuts-edit-btn" id="shortcuts-edit-btn" aria-label="Edit Shortcuts">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        </button>
+    </div>
+    
+    <div class="shortcuts-grid">
+        <button class="shortcut-item" id="shortcut-new-task" data-action="new-task">
+            <div class="shortcut-icon icon-blue">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            </div>
+            <span class="shortcut-label">Add Task</span>
+        </button>
+
+        <button class="shortcut-item" id="shortcut-clear-focus" data-action="reset-timer">
+            <div class="shortcut-icon icon-purple">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            </div>
+            <span class="shortcut-label">Reset Timer</span>
+        </button>
+
+        <button class="shortcut-item" id="shortcut-theme" data-action="toggle-theme">
+            <div class="shortcut-icon icon-amber">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+            </div>
+            <span class="shortcut-label">Toggle Theme</span>
+        </button>
+
+        <button class="shortcut-item" id="shortcut-analytics" data-action="open-analytics">
+            <div class="shortcut-icon icon-emerald">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <span class="shortcut-label">Analytics</span>
+        </button>
+    </div>
+ </div>
+
+ <!--سکشن نهم Upcoming Events -->
+
+ <div class="events-card">
+    <div class="events-header">
+        <h3>Upcoming Events</h3>
+        <span class="view-all">View All</span>
+    </div>
+    
+    <div class="events-list">
+        <div class="event-item">
+            <div class="event-date">
+                <span class="day">12</span>
+                <span class="month">AUG</span>
+            </div>
+            <div class="event-info">
+                <h4>Design Sync</h4>
+                <p>10:30 AM - Google Meet</p>
+            </div>
+            <div class="event-tag work">Work</div>
+        </div>
+
+        <div class="event-item">
+            <div class="event-date">
+                <span class="day">15</span>
+                <span class="month">AUG</span>
+            </div>
+            <div class="event-info">
+                <h4>Gym Session</h4>
+                <p>06:00 PM - Central Park</p>
+            </div>
+            <div class="event-tag personal">Personal</div>
+        </div>
+    </div>
+ </div>
+
+
+ <!-- سکشن دهم System Status -->
+
+ <div class="system-status-card">
+  <div class="status-header">
+    <h3>System Status</h3>
+    <span id="network-badge" class="network-badge online">Online</span>
+  </div>
+  
+  <div class="status-metrics">
+    <div class="metric-item">
+      <div class="metric-info">
+        <span class="metric-label">CPU Usage</span>
+        <span id="cpu-value" class="metric-val">24%</span>
+      </div>
+      <div class="metric-bar-bg">
+        <div id="cpu-bar" class="metric-bar-fill" style="width: 24%; --bar-color: #3b82f6;"></div>
+      </div>
+    </div>
+
+    <div class="metric-item">
+      <div class="metric-info">
+        <span class="metric-label">Memory (RAM)</span>
+        <span id="ram-value" class="metric-val">58%</span>
+      </div>
+      <div class="metric-bar-bg">
+        <div id="ram-bar" class="metric-bar-fill" style="width: 58%; --bar-color: #a855f7;"></div>
+      </div>
+    </div>
+
+    <div class="metric-item">
+      <div class="metric-info">
+        <span class="metric-label">Disk Storage</span>
+        <span id="storage-value" class="metric-val">72%</span>
+      </div>
+      <div class="metric-bar-bg">
+        <div id="storage-bar" class="metric-bar-fill" style="width: 72%; --bar-color: #10b981;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="status-footer">
+    <div class="ping-info">
+      <span class="ping-dot"></span>
+      <span id="ping-text">Ping: 42ms</span>
+    </div>
+    <span id="uptime-text" class="uptime-text">Uptime: 05:24:12</span>
+  </div>
+ </div>
+
+
+
+
+</div>
+</div>
+
+
+<br>
+<br>
+
+
+
+<div class="program-builder-overlay" id="programBuilderOverlay">
+  <div class="program-builder-modal">
+
+    <div id="main-builder-panel" class="builder-view">
+
+      <div class="program-builder-header">
+        <h2>Program Builder</h2>
+      </div>
+
+      <div class="program-builder-body">
+        <button
+          class="builder-dashed-btn"
+          type="button"
+          id="createGroupBtn"
+        >
+          + Create Group
+        </button>
+
+        <button
+          class="builder-solid-btn"
+          type="button"
+          id="manageLinesBtn"
+        >
+          Manage Unused Lines
+        </button>
+      </div>
+
+      <div class="program-builder-footer">
+        <button
+          class="builder-cancel-btn"
+          type="button"
+          id="closeProgramBuilder"
+        >
+          Cancel
+        </button>
+
+        <button
+          class="builder-save-btn"
+          type="button"
+          id="saveProgramBtn"
+        >
+          Save Program
+        </button>
+      </div>
+    </div>
+
+
+<div id="create-group-panel" class="builder-view hidden">
+
+  <div class="group-panel-header">
+    <button id="backToMainBtn" class="back-btn" type="button">
+      ← Back
+    </button>
+
+    <h2>Create New Group</h2>
+  </div>
+
+  <div class="group-panel-body">
+
+    <div class="input-group">
+      <label for="groupNameInput">Group Name</label>
+      <input
+        type="text"
+        id="groupNameInput"
+        placeholder="Enter group name..."
+      >
+    </div>
+
+    <div class="selected-lines-section">
+      <div class="selected-lines-header">
+        <span>Selected Lines</span>
+        <span id="selectedLinesCount">0 / 3</span>
+      </div>
+
+      <div class="lines-grid" id="linesGrid">
+        <button class="line-item" type="button" data-line="1">
+          <span class="line-column"></span>
+          <span class="line-number">1</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="2">
+          <span class="line-column"></span>
+          <span class="line-number">2</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="3">
+          <span class="line-column"></span>
+          <span class="line-number">3</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="4">
+          <span class="line-column"></span>
+          <span class="line-number">4</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="5">
+          <span class="line-column"></span>
+          <span class="line-number">5</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="6">
+          <span class="line-column"></span>
+          <span class="line-number">6</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="7">
+          <span class="line-column"></span>
+          <span class="line-number">7</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="8">
+          <span class="line-column"></span>
+          <span class="line-number">8</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="9">
+          <span class="line-column"></span>
+          <span class="line-number">9</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="10">
+          <span class="line-column"></span>
+          <span class="line-number">10</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="11">
+          <span class="line-column"></span>
+          <span class="line-number">11</span>
+        </button>
+
+        <button class="line-item" type="button" data-line="12">
+          <span class="line-column"></span>
+          <span class="line-number">12</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="group-time-section">
+      <h3 class="group-time-title">Execution Time</h3>
+
+      <div class="time-controls">
+
+        <div class="time-box-wrapper">
+          <div class="time-box" data-time-type="hours">
+            <button
+              type="button"
+              class="time-btn time-minus"
+              data-action="decrease"
+              aria-label="Decrease hours"
+            >
+              −
+            </button>
+
+            <span id="hoursValue" class="time-value">00</span>
+
+            <button
+              type="button"
+              class="time-btn time-plus"
+              data-action="increase"
+              aria-label="Increase hours"
+            >
+              +
+            </button>
+          </div>
+
+          <span class="time-label">Hours</span>
+        </div>
+
+        <div class="time-box-wrapper">
+          <div class="time-box" data-time-type="minutes">
+            <button
+              type="button"
+              class="time-btn time-minus"
+              data-action="decrease"
+              aria-label="Decrease minutes"
+            >
+              −
+            </button>
+
+            <span id="minutesValue" class="time-value">00</span>
+
+            <button
+              type="button"
+              class="time-btn time-plus"
+              data-action="increase"
+              aria-label="Increase minutes"
+            >
+              +
+            </button>
+          </div>
+
+          <span class="time-label">Minutes</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="program-builder-footer">
+    <button class="builder-cancel-btn" type="button" id="cancelGroupBtn">
+      Cancel
+    </button>
+
+    <button class="builder-save-btn" type="button" id="saveGroupBtn">
+      Save Group
+    </button>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+  const themeToggle = document.getElementById("themeToggle");
+  const themeIcon = document.getElementById("themeIcon");
+  const themeText = document.getElementById("themeText");
+
+  function applyThemeState() {
+    const isLightMode = document.body.classList.contains("light-mode");
+
+    if (isLightMode) {
+      themeIcon.src = "moon-svgrepo-com.svg";
+      themeText.textContent = "Dark";
+    } else {
+      themeIcon.src = "sun-svgrepo-com.svg";
+      themeText.textContent = "Light";
+    }
+  }
+
+  function toggleThemeMode() {
+    document.body.classList.toggle("light-mode");
+    applyThemeState();
+  }
+
+  themeToggle.addEventListener("click", toggleThemeMode);
+  applyThemeState();
+</script>
+
+
+<script>
+  (function () {
+    const el = document.getElementById("current-time");
+    if (!el) return;
+
+    function updateTime() {
+      const now = new Date();
+
+      const timeStr = now.toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true
+      });
+
+      el.textContent = timeStr;
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+  })();
+</script>
+
+<script>
+  async function loadHamedanWeather() {
+    try {
+      const latitude = 34.7983;
+      const longitude = 48.5146;
+
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min&timezone=Asia%2FTehran`;
+
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      const currentTemp = Math.round(data.current.temperature_2m);
+      const weatherCode = data.current.weather_code;
+      const maxTemp = Math.round(data.daily.temperature_2m_max[0]);
+      const minTemp = Math.round(data.daily.temperature_2m_min[0]);
+
+      const now = new Date();
+      const formattedDate = now.toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+      });
+
+      const formattedDay = now.toLocaleDateString("en-US", {
+        weekday: "long"
+      });
+
+      const weatherMap = getWeatherInfo(weatherCode);
+
+      document.getElementById("weather-date").textContent = formattedDate;
+      document.getElementById("weather-day").textContent = formattedDay;
+      document.getElementById("weather-temp").textContent = `${currentTemp}°`;
+      document.getElementById("weather-desc").textContent = weatherMap.label;
+      document.getElementById("weather-max").textContent = `H: ${maxTemp}°`;
+      document.getElementById("weather-min").textContent = `L: ${minTemp}°`;
+
+      const icon = document.getElementById("weather-icon");
+      icon.src = weatherMap.icon;
+      icon.alt = weatherMap.label;
+    } catch (error) {
+      console.error("Weather fetch error:", error);
+      document.getElementById("weather-desc").textContent = "Unavailable";
+    }
+  }
+
+  function getWeatherInfo(code) {
+    if (code === 0) {
+      return {
+        label: "Clear",
+        icon: "./9-sunny.svg"
+      };
+    }
+
+    if ([1, 2, 3].includes(code)) {
+      return {
+        label: "Partly Cloudy",
+        icon: "./10-cloudy night.svg"
+      };
+    }
+
+    if ([45, 48].includes(code)) {
+      return {
+        label: "Foggy",
+        icon: "./20-rainy.svg"
+      };
+    }
+
+    if ([51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82].includes(code)) {
+      return {
+        label: "Rainy",
+        icon: "./18-rainy night.svg"
+      };
+    }
+
+    if ([71, 73, 75, 77, 85, 86].includes(code)) {
+      return {
+        label: "Snowy",
+        icon: "./23-temperature.svg"
+      };
+    }
+
+    if ([95, 96, 99].includes(code)) {
+      return {
+        label: "Stormy",
+        icon: "./21-wind.svg"
+      };
+    }
+
+    return {
+      label: "Cloudy",
+      icon: "./10-cloudy night.svg"
+    };
+  }
+
+  loadHamedanWeather();
+</script>
+
+<script>
+  function setProductivityData({
+    completed = 0,
+    total = 0,
+    label = "No Data",
+    range = "Today"
+  }) {
+    const safeCompleted = Math.max(0, Number(completed) || 0);
+    const safeTotal = Math.max(0, Number(total) || 0);
+    const percent = safeTotal > 0
+      ? Math.min(100, Math.round((safeCompleted / safeTotal) * 100))
+      : 0;
+
+    const card = document.getElementById("productivity-card");
+    const ring = document.getElementById("productivity-ring");
+    const percentText = document.getElementById("productivity-percent");
+    const statusText = document.getElementById("productivity-status");
+    const completedText = document.getElementById("tasks-completed");
+    const totalText = document.getElementById("tasks-total");
+    const rangeText = document.getElementById("productivity-range");
+
+    if (!card || !ring || !percentText || !statusText || !completedText || !totalText || !rangeText) {
+      return;
+    }
+
+    ring.style.setProperty("--progress", percent);
+    ring.setAttribute("data-percent", percent);
+
+    percentText.textContent = `${percent}%`;
+    statusText.textContent = label;
+    completedText.textContent = safeCompleted;
+    totalText.textContent = safeTotal;
+    rangeText.textContent = range;
+  }
+
+  function getProductivityLabel(percent) {
+    if (percent >= 85) return "Excellent Progress!";
+    if (percent >= 65) return "Great Progress!";
+    if (percent >= 40) return "Keep Going";
+    if (percent > 0) return "Needs Attention";
+    return "No Activity Yet";
+  }
+
+  function loadDefaultProductivity() {
+    const completed = 14;
+    const total = 18;
+    const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+    setProductivityData({
+      completed: completed,
+      total: total,
+      label: getProductivityLabel(percent),
+      range: "Today"
+    });
+  }
+
+  loadDefaultProductivity();
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const focusRing = document.getElementById("focus-ring");
+    const focusTime = document.getElementById("focus-time");
+    const focusMode = document.getElementById("focus-mode");
+    const focusButton = document.getElementById("focus-start-btn");
+    const focusButtonIcon = focusButton?.querySelector(".focus-button-icon");
+    const focusButtonText = document.getElementById("focus-button-text");
+
+    if (
+      !focusRing ||
+      !focusTime ||
+      !focusMode ||
+      !focusButton ||
+      !focusButtonIcon ||
+      !focusButtonText
+    ) {
+      console.error("Focus Timer elements were not found.");
+      return;
+    }
+
+    let totalSeconds = 25 * 60;
+    let remainingSeconds = totalSeconds;
+    let timerInterval = null;
+    let isRunning = false;
+
+    function formatTime(seconds) {
+      const minutes = Math.floor(seconds / 60);
+      const remaining = seconds % 60;
+
+      return `${String(minutes).padStart(2, "0")}:${String(
+        remaining
+      ).padStart(2, "0")}`;
+    }
+
+    function updateTimerDisplay() {
+      const elapsedSeconds = totalSeconds - remainingSeconds;
+      const progress =
+        totalSeconds > 0
+          ? Math.min(100, (elapsedSeconds / totalSeconds) * 100)
+          : 0;
+
+      focusTime.textContent = formatTime(remainingSeconds);
+      focusRing.style.setProperty("--focus-progress", progress);
+      focusRing.setAttribute("aria-valuenow", Math.round(progress));
+      document.title = `${formatTime(remainingSeconds)} | Focus Timer`;
+    }
+
+    function updateButton() {
+      focusButton.classList.toggle("is-running", isRunning);
+      focusButtonIcon.textContent = isRunning ? "Ⅱ" : "▶";
+      focusButtonText.textContent = isRunning ? "Pause" : "Start";
+    }
+
+    function stopTimer() {
+      clearInterval(timerInterval);
+      timerInterval = null;
+      isRunning = false;
+      updateButton();
+    }
+
+    function completeTimer() {
+      stopTimer();
+      remainingSeconds = 0;
+      focusMode.textContent = "Session Complete";
+      focusButtonIcon.textContent = "↻";
+      focusButtonText.textContent = "Restart";
+      document.title = "Session Complete";
+      updateTimerDisplay();
+    }
+
+    function startTimer() {
+      if (remainingSeconds <= 0) {
+        remainingSeconds = totalSeconds;
+        focusMode.textContent = "Deep Work";
+        updateTimerDisplay();
+      }
+
+      isRunning = true;
+      updateButton();
+
+      timerInterval = setInterval(() => {
+        remainingSeconds -= 1;
+        updateTimerDisplay();
+
+        if (remainingSeconds <= 0) {
+          completeTimer();
+        }
+      }, 1000);
+    }
+
+    focusButton.addEventListener("click", () => {
+      if (isRunning) {
+        stopTimer();
+      } else {
+        startTimer();
+      }
+    });
+
+    window.setFocusTimer = function (minutes, mode = "Deep Work") {
+      const safeMinutes = Math.max(1, Number(minutes) || 25);
+
+      stopTimer();
+      totalSeconds = Math.round(safeMinutes * 60);
+      remainingSeconds = totalSeconds;
+      focusMode.textContent = mode;
+      document.title = "Dashboard";
+      updateTimerDisplay();
+    };
+
+    updateTimerDisplay();
+    updateButton();
+  });
+
+
+
+
+
+
+
+
+const hoursValue = document.getElementById("hoursValue");
+const minutesValue = document.getElementById("minutesValue");
+
+let selectedHours = 0;
+let selectedMinutes = 0;
+
+function formatTimeValue(value) {
+  return String(value).padStart(2, "0");
+}
+
+function updateTimeValues() {
+  if (hoursValue) {
+    hoursValue.textContent = formatTimeValue(selectedHours);
+  }
+
+  if (minutesValue) {
+    minutesValue.textContent = formatTimeValue(selectedMinutes);
+  }
+}
+
+document.querySelectorAll(".time-btn").forEach(function (button) {
+  button.addEventListener("click", function () {
+    const timeBox = button.closest(".time-box");
+
+    if (!timeBox) return;
+
+    const timeType = timeBox.dataset.timeType;
+    const action = button.dataset.action;
+
+    if (timeType === "hours") {
+      if (action === "increase") {
+        selectedHours++;
+
+        if (selectedHours > 23) {
+          selectedHours = 0;
+        }
+      }
+
+      if (action === "decrease") {
+        selectedHours--;
+
+        if (selectedHours < 0) {
+          selectedHours = 23;
+        }
+      }
+    }
+
+    if (timeType === "minutes") {
+      if (action === "increase") {
+        selectedMinutes += 5;
+
+        if (selectedMinutes > 55) {
+          selectedMinutes = 0;
+        }
+      }
+
+      if (action === "decrease") {
+        selectedMinutes -= 5;
+
+        if (selectedMinutes < 0) {
+          selectedMinutes = 55;
+        }
+      }
+    }
+
+    updateTimeValues();
+  });
+});
+
+
+
+
+
+</script>
+
+
+
+<script>
+
+function updateWeeklyActivity(activityData) {
+    const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    
+    let maxHours = 0;
+    let peakDay = '';
+    
+    days.forEach(day => {
+        const hours = activityData[day] || 0;
+        if (hours > maxHours) {
+            maxHours = hours;
+            peakDay = day;
+        }
+    });
+
+    const finalMax = maxHours === 0 ? 10 : maxHours;
+
+    days.forEach(day => {
+        const hours = activityData[day] || 0;
+        const heightPercent = (hours / finalMax) * 100;
+        
+        const barElement = document.getElementById(`bar-fill-${day.toLowerCase()}`);
+        const groupElement = document.getElementById(`bar-${day.toLowerCase()}`);
+        
+        if (barElement && groupElement) {
+            barElement.style.setProperty('--height', `${heightPercent}%`);
+            groupElement.classList.remove('active');
+
+            if (day === peakDay && hours > 0) {
+                groupElement.classList.add('active');
+
+                let tooltip = document.getElementById('activity-tooltip');
+                if (!tooltip) {
+                    tooltip = document.createElement('div');
+                    tooltip.id = 'activity-tooltip';
+                    tooltip.className = 'tooltip';
+                }
+                tooltip.textContent = `${hours.toFixed(1)}h`;
+
+                const wrapper = groupElement.querySelector('.bar-wrapper');
+                if (wrapper) {
+                    wrapper.insertBefore(tooltip, wrapper.firstChild);
+                }
+            }
+        }
+    });
+}
+
+
+</script>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    const shortcutsCard = document.getElementById('shortcuts-card');
+
+    if (shortcutsCard) {
+        shortcutsCard.addEventListener('click', (event) => {
+            const item = event.target.closest('.shortcut-item');
+            if (!item) return;
+
+            const action = item.getAttribute('data-action');
+            
+            handleShortcutAction(action);
+        });
+    }
+});
+
+function handleShortcutAction(action) {
+    switch (action) {
+        case 'new-task': {
+    const taskInput =
+        document.getElementById('todo-input') ||
+        document.getElementById('task-input') ||
+        document.querySelector('#tasks-list input, #tasks input, input[name="task"]');
+
+    if (taskInput) {
+        taskInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        taskInput.focus();
+
+        taskInput.style.outline = '2px solid #60a5fa';
+        taskInput.style.boxShadow = '0 0 0 4px rgba(96,165,250,0.2)';
+
+        setTimeout(() => {
+            taskInput.style.outline = '';
+            taskInput.style.boxShadow = '';
+        }, 1200);
+    } else {
+        console.warn('Task input not found. Check the input id/name in HTML.');
+    }
+    break;
+}
+
+            
+        case 'reset-timer':
+            if (typeof setFocusTimer === 'function') {
+                setFocusTimer(25); 
+                console.log('Focus timer reset to 25 mins via shortcut.');
+            } else {
+                console.log('Reset timer action triggered.');
+            }
+            break;
+            
+        case 'toggle-theme':
+    toggleThemeMode();
+    break;
+
+            
+        case 'open-analytics':
+            const activityCard = document.getElementById('weekly-activity-card');
+            if (activityCard) {
+                activityCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            break;
+
+        default:
+            console.log(`No handler defined for shortcut action: ${action}`);
+    }
+}
+
+
+</script>
+
+
+<script>
+
+function updateSystemStatus(data) {
+    if (!data) return;
+
+    // Update CPU
+    if (typeof data.cpu === 'number') {
+        const cpuVal = document.getElementById('cpu-value');
+        const cpuBar = document.getElementById('cpu-bar');
+        if (cpuVal && cpuBar) {
+            cpuVal.textContent = `${data.cpu}%`;
+            cpuBar.style.width = `${data.cpu}%`;
+        }
+    }
+
+    // Update RAM
+    if (typeof data.ram === 'number') {
+        const ramVal = document.getElementById('ram-value');
+        const ramBar = document.getElementById('ram-bar');
+        if (ramVal && ramBar) {
+            ramVal.textContent = `${data.ram}%`;
+            ramBar.style.width = `${data.ram}%`;
+        }
+    }
+
+    // Update Storage
+    if (typeof data.storage === 'number') {
+        const storageVal = document.getElementById('storage-value');
+        const storageBar = document.getElementById('storage-bar');
+        if (storageVal && storageBar) {
+            storageVal.textContent = `${data.storage}%`;
+            storageBar.style.width = `${data.storage}%`;
+        }
+    }
+
+    // Update Ping
+    if (data.ping) {
+        const pingText = document.getElementById('ping-text');
+        if (pingText) {
+            pingText.textContent = `Ping: ${data.ping}ms`;
+        }
+    }
+
+    // Update Network Status Badge
+    const netBadge = document.getElementById('network-badge');
+    if (netBadge && typeof data.online === 'boolean') {
+        if (data.online) {
+            netBadge.textContent = 'Online';
+            netBadge.className = 'network-badge online';
+        } else {
+            netBadge.textContent = 'Offline';
+            netBadge.className = 'network-badge offline';
+        }
+    }
+
+    // Update Uptime text
+    if (data.uptime) {
+        const uptimeText = document.getElementById('uptime-text');
+        if (uptimeText) {
+            uptimeText.textContent = `Uptime: ${data.uptime}`;
+        }
+    }
+}
+
+function startSystemStatusSimulation() {
+    setInterval(() => {
+        const mockCPU = Math.floor(15 + Math.random() * 25);
+        const mockRAM = Math.floor(55 + Math.random() * 5);
+        const mockPing = Math.floor(35 + Math.random() * 15); 
+        
+        updateSystemStatus({
+            cpu: mockCPU,
+            ram: mockRAM,
+            ping: mockPing
+        });
+    }, 4000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    startSystemStatusSimulation();
+});
+
+
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const addTaskBtn = document.getElementById("add-task-btn");
+  const programBuilderOverlay = document.getElementById("programBuilderOverlay");
+  const closeProgramBuilder = document.getElementById("closeProgramBuilder");
+
+  const createGroupBtn = document.getElementById("createGroupBtn");
+  const backToMainBtn = document.getElementById("backToMainBtn");
+  const cancelGroupBtn = document.getElementById("cancelGroupBtn");
+  const saveGroupBtn = document.getElementById("saveGroupBtn");
+  const saveProgramBtn = document.getElementById("saveProgramBtn");
+
+  const mainBuilderPanel = document.getElementById("main-builder-panel");
+  const createGroupPanel = document.getElementById("create-group-panel");
+
+  const groupNameInput = document.getElementById("groupNameInput");
+  const selectedLinesCount = document.getElementById("selectedLinesCount");
+  const groupFormError = document.getElementById("groupFormError");
+
+  const tasksList = document.getElementById("tasks-list");
+  const lineItems = document.querySelectorAll(".line-item");
+
+  const selectedLines = new Set();
+  const createdGroups = [];
+  const MAX_LINES_PER_GROUP = 3;
+
+  function updateSelectedLinesCount() {
+    if (selectedLinesCount) {
+      selectedLinesCount.textContent = `${selectedLines.size} / ${MAX_LINES_PER_GROUP}`;
+    }
+  }
+
+  function showGroupError(message) {
+    if (!groupFormError) return;
+    groupFormError.textContent = message;
+    groupFormError.classList.add("active");
+  }
+
+  function clearGroupError() {
+    if (!groupFormError) return;
+    groupFormError.textContent = "";
+    groupFormError.classList.remove("active");
+    if (groupNameInput) groupNameInput.classList.remove("input-error");
+  }
+
+
+
+function resetGroupForm() {
+  if (groupNameInput) {
+    groupNameInput.value = "";
+  }
+
+  selectedLines.clear();
+
+  lineItems.forEach(function (lineItem) {
+    lineItem.classList.remove("selected");
+  });
+
+  selectedHours = 0;
+  selectedMinutes = 0;
+
+  updateSelectedLinesCount();
+  updateTimeValues();
+  clearGroupError();
+}
+
+
+
+
+
+
+  function closeBuilder() {
+    if (programBuilderOverlay) {
+      programBuilderOverlay.classList.remove("active");
+    }
+  }
+
+  function openMainPanel() {
+    if (mainBuilderPanel) mainBuilderPanel.classList.remove("hidden");
+    if (createGroupPanel) createGroupPanel.classList.add("hidden");
+  }
+
+  function openCreateGroupPanel() {
+    if (mainBuilderPanel) mainBuilderPanel.classList.add("hidden");
+    if (createGroupPanel) createGroupPanel.classList.remove("hidden");
+  }
+
+  function createGroupTaskElement(group) {
+    const groupItem = document.createElement("div");
+    groupItem.className = "task-item program-group-item";
+    groupItem.dataset.groupId = group.id;
+
+    const taskLeft = document.createElement("div");
+    taskLeft.className = "task-left";
+
+    const groupIndicator = document.createElement("span");
+    groupIndicator.className = "group-indicator";
+
+    const groupContent = document.createElement("div");
+    groupContent.className = "group-task-content";
+
+    const groupTitle = document.createElement("span");
+    groupTitle.className = "task-title";
+    groupTitle.textContent = group.name;
+
+    const groupLines = document.createElement("div");
+    groupLines.className = "group-lines";
+
+    group.lines.forEach(function (lineNumber) {
+      const badge = document.createElement("span");
+      badge.className = "group-line-badge";
+      badge.textContent = `Line ${lineNumber}`;
+      groupLines.appendChild(badge);
+    });
+
+    const groupTime = document.createElement("span");
+    groupTime.className = "group-task-time";
+
+    groupTime.textContent =
+    `${formatTimeValue(group.hours)}:${formatTimeValue(group.minutes)}`;
+
+
+    groupContent.appendChild(groupTitle);
+    groupContent.appendChild(groupLines);
+    groupContent.appendChild(groupTime);
+    taskLeft.appendChild(groupIndicator);
+    taskLeft.appendChild(groupContent);
+
+    const taskRight = document.createElement("div");
+    taskRight.className = "task-right";
+
+    const status = document.createElement("span");
+    status.className = "task-status";
+    status.textContent = "Group";
+
+    const deleteButton = document.createElement("button");
+    deleteButton.className = "task-delete group-delete";
+    deleteButton.type = "button";
+    deleteButton.textContent = "×";
+    deleteButton.setAttribute("aria-label", `Delete ${group.name}`);
+
+    deleteButton.addEventListener("click", function () {
+      deleteGroup(group.id);
+    });
+
+    taskRight.appendChild(status);
+    taskRight.appendChild(deleteButton);
+
+    groupItem.appendChild(taskLeft);
+    groupItem.appendChild(taskRight);
+
+    return groupItem;
+  }
+
+  function renderProgramGroups() {
+    if (!tasksList) return;
+
+    const oldProgramGroups = tasksList.querySelectorAll(".program-group-item");
+    oldProgramGroups.forEach(function (groupItem) {
+      groupItem.remove();
+    });
+
+    createdGroups.forEach(function (group) {
+      tasksList.appendChild(createGroupTaskElement(group));
+    });
+  }
+
+  function deleteGroup(groupId) {
+    const index = createdGroups.findIndex(function (group) {
+      return group.id === groupId;
+    });
+
+    if (index !== -1) {
+      createdGroups.splice(index, 1);
+    }
+
+    const groupElement = tasksList.querySelector(
+      `[data-group-id="${CSS.escape(groupId)}"]`
+    );
+
+    if (groupElement) {
+      groupElement.remove();
+    }
+  }
+
+  if (addTaskBtn && programBuilderOverlay) {
+    addTaskBtn.addEventListener("click", function (event) {
+      event.preventDefault();
+      programBuilderOverlay.classList.add("active");
+      openMainPanel();
+    });
+  }
+
+  if (closeProgramBuilder) {
+    closeProgramBuilder.addEventListener("click", closeBuilder);
+  }
+
+  if (programBuilderOverlay) {
+    programBuilderOverlay.addEventListener("click", function (event) {
+      if (event.target === programBuilderOverlay) {
+        closeBuilder();
+      }
+    });
+  }
+
+  if (createGroupBtn) {
+    createGroupBtn.addEventListener("click", function () {
+      openCreateGroupPanel();
+    });
+  }
+
+  if (backToMainBtn) {
+    backToMainBtn.addEventListener("click", function () {
+      openMainPanel();
+    });
+  }
+
+  if (cancelGroupBtn) {
+    cancelGroupBtn.addEventListener("click", function () {
+      openMainPanel();
+    });
+  }
+
+  if (groupNameInput) {
+    groupNameInput.addEventListener("input", function () {
+      if (groupNameInput.value.trim()) {
+        clearGroupError();
+      }
+    });
+  }
+
+  lineItems.forEach(function (lineItem) {
+    lineItem.addEventListener("click", function () {
+      const lineNumber = lineItem.dataset.line;
+
+      if (selectedLines.has(lineNumber)) {
+        selectedLines.delete(lineNumber);
+        lineItem.classList.remove("selected");
+        updateSelectedLinesCount();
+        clearGroupError();
+        return;
+      }
+
+      if (selectedLines.size >= MAX_LINES_PER_GROUP) {
+        showGroupError("Each group can contain a maximum of 3 columns.");
+        return;
+      }
+
+      selectedLines.add(lineNumber);
+      lineItem.classList.add("selected");
+      updateSelectedLinesCount();
+      clearGroupError();
+    });
+  });
+
+  if (saveGroupBtn) {
+    saveGroupBtn.addEventListener("click", function () {
+      const groupName = groupNameInput ? groupNameInput.value.trim() : "";
+
+      if (!groupName) {
+        showGroupError("Please enter a name for the group.");
+        if (groupNameInput) {
+          groupNameInput.classList.add("input-error");
+          groupNameInput.focus();
+        }
+        return;
+      }
+
+      if (selectedLines.size === 0) {
+        showGroupError("Please select at least one column.");
+        return;
+      }
+
+
+const newGroup = {
+  id: crypto.randomUUID
+    ? crypto.randomUUID()
+    : `${Date.now()}-${Math.random()}`,
+
+  name: groupName,
+
+  lines: Array.from(selectedLines)
+    .map(Number)
+    .sort(function (a, b) {
+      return a - b;
+    }),
+
+  hours: selectedHours,
+  minutes: selectedMinutes
+};
+
+      createdGroups.push(newGroup);
+      resetGroupForm();
+      openMainPanel();
+    });
+  }
+
+  if (saveProgramBtn) {
+    saveProgramBtn.addEventListener("click", function () {
+      if (createdGroups.length === 0) {
+        alert("Please create at least one group.");
+        return;
+      }
+
+      renderProgramGroups();
+      closeBuilder();
+    });
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && programBuilderOverlay && programBuilderOverlay.classList.contains("active")) {
+      closeBuilder();
+    }
+  });
+
+  updateSelectedLinesCount();
+});
+</script>
+
+
+
+
+
+</body>
+</html>
